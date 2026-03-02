@@ -35,7 +35,7 @@ def main():
 
     print("\nSaving model and metrics...")
     save_model(model, MODEL_SAVE_PATH)
-    model_name = "RandomForest"
+    model_name = "RandomForest_SMOTE"
 
     save_metrics(
         model_name,
