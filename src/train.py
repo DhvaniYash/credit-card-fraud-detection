@@ -35,7 +35,15 @@ def main():
 
     print("\nSaving model and metrics...")
     save_model(model, MODEL_SAVE_PATH)
-    save_metrics(report, roc_auc, METRICS_SAVE_PATH)
+    model_name = "RandomForest"
+
+    save_metrics(
+        model_name,
+        cm,
+        report,
+        roc_auc,
+        METRICS_SAVE_PATH
+    )
 
     print("\nPipeline finished successfully.")
 
