@@ -48,7 +48,7 @@ credit-card-fraud-detection/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
-
+```
 ## Models Used
 
 The project includes the following models:
