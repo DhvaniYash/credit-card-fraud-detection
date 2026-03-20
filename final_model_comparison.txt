@@ -1,0 +1,25 @@
+Final Model Comparison
+
+1. RandomForest_SMOTE
+Precision: 0.87
+Recall: 0.83
+F1-score: 0.85
+ROC-AUC: 0.9684509513569075
+
+2. LogisticRegression_SMOTE
+Precision: 0.06
+Recall: 0.92
+F1-score: 0.11
+ROC-AUC: 0.9708434302252134
+
+3. MLP_SMOTE
+Precision: 0.72
+Recall: 0.81
+F1-score: 0.76
+ROC-AUC: 0.9635151683070527
+
+Best Overall Model:
+RandomForest_SMOTE
+
+Reason:
+RandomForest_SMOTE gave the best overall balance between precision, recall, and F1-score for fraud detection. LogisticRegression_SMOTE had very high recall, but its precision was extremely low, which means it predicted too many normal transactions as fraud. MLP_SMOTE performed better than LogisticRegression_SMOTE in balance, but it was still weaker than RandomForest_SMOTE.
