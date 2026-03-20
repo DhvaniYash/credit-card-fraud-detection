@@ -36,7 +36,7 @@ credit-card-fraud-detection/
 │   └── metrics.txt
 │
 ├── src/
-│   ├── baseline_model.py
+│   ├── old_baseline_model.py
 │   ├── config.py
 │   ├── data_loader.py
 │   ├── evaluate.py
@@ -111,17 +111,20 @@ results/metrics.txt for evaluation results
 
 results/plots/ for visualizations
 
+Current model comparison summary:
+
+- RandomForest_SMOTE: precision 0.87, recall 0.83, f1-score 0.85, ROC-AUC 0.9685
+- LogisticRegression_SMOTE: precision 0.06, recall 0.92, f1-score 0.11, ROC-AUC 0.9708
+- MLP_SMOTE: precision 0.72, recall 0.81, f1-score 0.76, ROC-AUC 0.9635
+
+Based on these results, RandomForest_SMOTE gave the best overall balance for fraud detection.
+
 ## Future Improvements
 
-Some possible future improvements are:
-
-add SMOTE experiments
-
-tune hyperparameters
-
-improve README and result visualizations
-
-compare model performance more clearly
+- tune hyperparameters
+- add more result visualizations
+- improve final report and discussion
+- explore additional imbalance handling techniques
 
 
 Author
