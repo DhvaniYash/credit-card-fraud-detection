@@ -81,3 +81,24 @@ weighted avg       1.00      1.00      1.00     56962
 
 ROC-AUC Score:
 0.9635151683070527
+
+============================================================
+Model: RandomForest_Tuned_SMOTE
+Timestamp: 2026-03-23 12:45:26.934779
+
+Confusion Matrix:
+[[56837    27]
+ [   17    81]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56864
+           1       0.75      0.83      0.79        98
+
+    accuracy                           1.00     56962
+   macro avg       0.87      0.91      0.89     56962
+weighted avg       1.00      1.00      1.00     56962
+
+ROC-AUC Score:
+0.9798625327311565
