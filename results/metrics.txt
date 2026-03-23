@@ -81,3 +81,24 @@ weighted avg       1.00      1.00      1.00     56962
 
 ROC-AUC Score:
 0.9635151683070527
+
+============================================================
+Model: LogisticRegression_L2_SMOTE
+Timestamp: 2026-03-23 13:00:50.231914
+
+Confusion Matrix:
+[[55399  1465]
+ [    8    90]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.97      0.99     56864
+           1       0.06      0.92      0.11        98
+
+    accuracy                           0.97     56962
+   macro avg       0.53      0.95      0.55     56962
+weighted avg       1.00      0.97      0.99     56962
+
+ROC-AUC Score:
+0.9709177213372687

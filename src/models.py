@@ -8,6 +8,9 @@ from src.config import RANDOM_STATE
 
 def get_logistic_model():
     return LogisticRegression(
+        penalty="l2",
+        C=0.1,
+        solver="liblinear",
         max_iter=2000,
         class_weight="balanced",
         random_state=RANDOM_STATE
