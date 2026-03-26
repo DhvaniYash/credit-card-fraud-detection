@@ -20,3 +20,6 @@ def save_metrics(model_name, cm, report_text, roc_auc, path):
         f.write("\nROC-AUC Score:\n")
         f.write(str(roc_auc))
         f.write("\n")
+
+def save_scaler(scaler, path):
+    joblib.dump(scaler, path)

@@ -7,3 +7,4 @@ RANDOM_STATE = 42
 
 MODEL_SAVE_PATH = "results/models/mlp_model.pkl"
 METRICS_SAVE_PATH = "results/metrics.txt"
+SCALER_SAVE_PATH = "results/models/scaler.pkl"

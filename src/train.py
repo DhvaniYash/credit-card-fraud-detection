@@ -4,8 +4,8 @@ from src.data_loader import load_data
 from src.preprocess import preprocess_data
 from src.models import get_mlp_model
 from src.evaluate import evaluate_model
-from src.utils import save_model, save_metrics
-from src.config import MODEL_SAVE_PATH, METRICS_SAVE_PATH
+from src.utils import save_model, save_metrics, save_scaler
+from src.config import MODEL_SAVE_PATH, METRICS_SAVE_PATH, SCALER_SAVE_PATH
 
 
 def main():
@@ -13,7 +13,7 @@ def main():
     df = load_data()
 
     print("Preprocessing data...")
-    X_train, X_test, y_train, y_test = preprocess_data(df)
+    X_train, X_test, y_train, y_test, scaler = preprocess_data(df)
 
     print("Initializing model...")
     model = get_mlp_model()
@@ -35,6 +35,7 @@ def main():
 
     print("\nSaving model and metrics...")
     save_model(model, MODEL_SAVE_PATH)
+    save_scaler(scaler, SCALER_SAVE_PATH)
     model_name = "MLP_SMOTE"
 
     save_metrics(
