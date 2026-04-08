@@ -2,7 +2,7 @@
 
 from src.data_loader import load_data
 from src.preprocess import preprocess_data
-from src.models import get_mlp_model
+from src.models import get_random_forest_model
 from src.evaluate import evaluate_model
 from src.utils import save_model, save_metrics, save_scaler
 from src.config import MODEL_SAVE_PATH, METRICS_SAVE_PATH, SCALER_SAVE_PATH
@@ -16,7 +16,7 @@ def main():
     X_train, X_test, y_train, y_test, scaler = preprocess_data(df)
 
     print("Initializing model...")
-    model = get_mlp_model()
+    model = get_random_forest_model()
 
     print("Training model...")
     model.fit(X_train, y_train)
@@ -36,7 +36,7 @@ def main():
     print("\nSaving model and metrics...")
     save_model(model, MODEL_SAVE_PATH)
     save_scaler(scaler, SCALER_SAVE_PATH)
-    model_name = "MLP_SMOTE"
+    model_name = "RandomForest_SMOTE"
 
     save_metrics(
         model_name,
