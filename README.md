@@ -55,6 +55,7 @@ credit-card-fraud-detection/
 ├── requirements.txt
 └── .gitignore
 ```
+
 ## Models Used
 
 The project includes the following models:
@@ -97,20 +98,46 @@ Based on these results, RandomForest_SMOTE gave the best overall balance for fra
 
 ## Gradio App
 
-This project also includes a simple Gradio app that allows users to upload a CSV file and get fraud predictions for each transaction.
+This project includes a Gradio app that allows users to upload a CSV file and get fraud predictions for each transaction using the trained Random Forest model.
 
-## App Features
+### App Features
+
 - upload a CSV file
-- detect fraud using the trained Random Forest model
-- show a clean output table with:
-      - `Transaction_Number`
-      - `Prediction_Label`
+- predict whether each transaction is **Fraud** or **Not Fraud**
+- show a clean **Prediction Summary**
+- show a simple **What This Means** explanation
+- display a clean results table with:
+  - `Transaction_Number`
+  - `Prediction_Label`
+- download the prediction results as a CSV file
 
-## Files Used by the App
+### Files Used by the App
 
 The app uses:
+
+- `app.py`
 - `results/models/random_forest_model.pkl`
 - `results/models/scaler.pkl`
+
+### How to Run the Gradio App
+
+```bash
+python app.py
+```
+Then open the local link shown in the terminal, usually:
+
+```text
+http://127.0.0.1:7860
+```
+
+### App Output
+After uploading a CSV file, the app shows:
+
+- total number of transactions
+- how many were predicted as fraud
+- how many were predicted as not fraud
+- row-by-row prediction labels
+- a downloadable CSV file of the prediction results
 
 ## How to Run the Training Pipeline
 1. Open the project in VS Code
@@ -123,25 +150,6 @@ pip install -r requirements.txt
 ```bash
 python -m src.train
 ```
-
-## How to Run the Gradio App
-1. Open the project in VS Code
-2. Open a terminal in the project folder
-3. Install Gradio if needed:
-```bash
-pip install gradio
-```
-4. Run the app:
-```bash
-python app.py
-```
-5. Open the local link shown in the terminal:
-```bash
-http://127.x.x.x:xxxx
-```
-6. Upload a CSV file with the expected transaction feature columns
-7. Click Submit
-8. View the fraud prediction results
 
 ## Results
 
